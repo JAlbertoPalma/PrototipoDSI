@@ -1,0 +1,297 @@
+/* Variables y configuración global */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+ 
+:root {
+    --color-primary: #f59e0b;
+    --color-secondary: #0ea5e9;
+    --color-background: #18181b;
+    --color-surface: #27272a;
+    --color-text: #f4f4f5; 
+    --color-link: #3b82f6;
+    --spacing-unit: 1rem;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Contenedor principal para simular la vista móvil */
+.app-container {
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: calc(5 * var(--spacing-unit)); /* Espacio para el menú */
+}
+
+/* Control de pantallas */
+.screen {
+    display: none;
+    padding: calc(1.5 * var(--spacing-unit)) var(--spacing-unit);
+}
+.screen-full-center {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding-top: 5rem;
+    height: 100vh;
+}
+
+/* Componentes reutilizables */
+/* Botones */
+.btn-base {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-primary:hover { background-color: #0c8ecf; }
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.75rem;
+}
+.btn-secondary:hover { background-color: #d97706; }
+
+/* Campos de Entrada */
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: calc(1.5 * var(--spacing-unit));
+    background-color: white;
+    color: #18181b;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    outline: none;
+    box-sizing: border-box; /* Importante para el cálculo del ancho */
+}
+.input-field:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.5);
+}
+
+/* Encabezados y Labels */
+.text-label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: #d4d4d8;
+    text-align: left;
+}
+.screen-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: calc(2 * var(--spacing-unit));
+}
+
+/* Cards (Para foro y directorio) */
+.card {
+    background-color: var(--color-surface);
+    padding: var(--spacing-unit);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: calc(1.5 * var(--spacing-unit));
+}
+
+/* Componente de Icono de Usuario Grande para Login */
+.login-icon-container {
+    margin-bottom: 2.5rem; 
+    padding: 0.5rem; 
+    background-color: rgba(63, 63, 70, 0.5); 
+    border-radius: 50%; 
+    width: 10rem; 
+    height: 10rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.login-icon {
+    width: 6rem; 
+    height: 6rem; 
+    color: #a1a1aa;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: var(--color-surface);
+    border-top: 1px solid #3f3f46; 
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.nav-button {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 0 0.25rem;
+    border-radius: 0.75rem;
+    color: #a1a1aa; 
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-button:hover { background-color: #3f3f46; }
+
+.nav-button-active {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    font-weight: 600;
+}
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0.25rem;
+}
+.nav-text {
+    font-size: 0.75rem;
+}
+
+/* Estilo para la Zona Tranquila */
+@keyframes breathing-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.7; }
+}
+.breathing-circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.5);
+    margin: 3rem auto;
+    animation: breathing-pulse 4s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos específicos para elementos que tenían estilos en línea */
+.back-link {
+    color: #a1a1aa; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    font-size: 0.875rem;
+}
+.header-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 2rem; 
+    padding-top: 1rem;
+    position: relative;
+}
+.header-title-centered {
+    margin: 0; 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%;
+}
+.reg-container {
+    padding: 0.5rem; 
+    text-align: center;
+}
+.reg-select-group {
+    display: flex; 
+    margin-bottom: 1.5rem;
+}
+.reg-input-combo {
+    margin-bottom: 0; 
+    border-top-right-radius: 0; 
+    border-bottom-right-radius: 0;
+}
+.reg-button-combo {
+    background-color: white; 
+    padding: 0 1rem; 
+    color: black; 
+    border-top-right-radius: 0.5rem; 
+    border-bottom-right-radius: 0.5rem; 
+    transition: background-color 0.2s; 
+    border: none;
+}
+.foro-user-avatar {
+    padding: 0.25rem; 
+    background-color: #3f3f46; 
+    border-radius: 50%; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0; 
+    margin-right: 0.75rem;
+}
+
+.perfil-user-avatar {
+    padding: 0.25rem; 
+    background-color: #3f3f46; 
+    border-radius: 50%; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0;
+}
+.search-button {
+    background-color: #a1a1aa; 
+    color: black; 
+    font-weight: 600; 
+    padding: 0.5rem 1rem; 
+    border-top-left-radius: 0.5rem; 
+    border-bottom-left-radius: 0.5rem; 
+    transition: background-color 0.2s; 
+    border: none;
+}
+.search-input {
+    flex-grow: 1; 
+    padding: 0.5rem; 
+    background-color: white; 
+    color: black; 
+    border-top-right-radius: 0.5rem; 
+    border-bottom-right-radius: 0.5rem; 
+    border: none; 
+    outline: none;
+}
+.dir-avatar-container {
+    padding: 0.5rem; 
+    background-color: #3f3f46; 
+    border-radius: 50%; 
+    width: 3rem; 
+    height: 3rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0;
+}

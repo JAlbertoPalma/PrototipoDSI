@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 3 - Salud en estudiantes de licenciatura</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <div id="login" class="screen" data-url="pantallas/login.html"></div>
+        <div id="registro1" class="screen" data-url="pantallas/register1.html"></div>
+        <div id="registro2" class="screen" data-url="pantallas/register2.html"></div>
+        <div id="foro" class="screen" data-url="pantallas/foro.html"></div>
+        <div id="zona_tranquila" class="screen" data-url="pantallas/zona_tranquila.html"></div>
+        <div id="directorio" class="screen" data-url="pantallas/directorio.html"></div>
+        <div id="perfil" class="screen" data-url="pantallas/perfil.html"></div>
+    </div>
+
+    <div id="nav-menu" class="nav-menu" style="display: none;">
+        <div data-screen="foro" onclick="showScreen('foro')" class="nav-button">
+            <i data-lucide="messages-square" clas="nav-icon"></i>
+            <span class="nav-text">Foro</span>
+        </div>
+
+        <div data-screen="zona_tranquila" onclick="showScreen('zona_tranquila')" class="nav-button">
+            <i data-lucide="sun" class="nav-icon"></i>
+            <span class="nav-text">Zona tranquila</span>
+        </div>
+
+        <div data-screen="directorio" onclick="showScreen('directorio')" class="nav-button">
+            <i data-lucide="users" class = "nav-icon"></i>
+            <span class="nav-text">Directorio</span>
+        </div>
+
+        <div data-screen="perfil" onclick="showScreen('perfil')" class="nav-button">
+            <i data-lucide="user" class = "nav-icon"></i>
+            <span class="nav-text">Perfil</span>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<div class="header-container">
+    <a href="#" onclick="showScreen('registro1')" class="back-link">
+        <i data-lucide="chevron-left" style="width: 1.25rem; height: 1.25rem; margin-right: 0.25rem;"></i>Atrás
+    </a>
+    <h1 class="screen-title header-title-centered">Registro de usuario</h1>
+</div>
+
+<div class="reg-container">
+    <p style="font-size: 1.125rem; margin-bottom: 2rem;">¿Quieres agregar un widget o atajo para algunos ejercicios de relajación?</p>
+
+    <button onclick="showScreen('foro')" class="btn-base btn-secondary">
+        Solo registrar
+    </button>
+    <button onclick="showScreen('foro')" class="btn-base btn-primary" style="margin-bottom: 3rem;">
+        ¡Vamos!
+    </button>
+
+    <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Sobre qué te gustarían los ejercicios?</p>
+    <select id="ejercicios-tema" class="input-field">
+        <option value="panico">Pánico escénico</option>
+        <option value="estres">Estrés y ansiedad</option>
+        <option value="sueno">Problemas de sueno</option>
+        <option value="concentracion">Concentración y enfoque</option>
+    </select>
+
+    <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Qué estilo de ejercicios te gustarían?</p>
+    <select id="ejercicios-tema" class="input-field">
+        <option value="visual">Visuales</option>
+        <option value="auditivo">Auditivos</option>
+        <option value="respiracion">De respiración</option>
+        <option value="meditacion">Meditación guiada</option>
+    </select>
+
+    <button onclick="showScreen('foro')" class="btn-base btn-primary">
+        Registrarse
+    </button>
+</div>
