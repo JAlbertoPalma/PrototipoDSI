@@ -6,30 +6,32 @@
 </div>
 
 <div class="reg-container">
-    <p style="font-size: 1.125rem; margin-bottom: 2rem;">¿Quieres agregar un widget o atajo para algunos ejercicios de relajación?</p>
+    <p style="font-size: 1.125rem; margin-bottom: 2rem;">¿Quieres añadir para algunos ejercicios de relajación?</p>
 
     <button onclick="showScreen('foro')" class="btn-base btn-secondary">
         Solo registrar
     </button>
-    <button onclick="showScreen('foro')" class="btn-base btn-primary" style="margin-bottom: 3rem;">
+    <button onclick="mostrarOpciones()" class="btn-base btn-primary" style="margin-bottom: 3rem;">
         ¡Vamos!
     </button>
 
-    <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Sobre qué te gustarían los ejercicios?</p>
-    <select id="ejercicios-tema" class="input-field">
-        <option value="panico">Pánico escénico</option>
-        <option value="estres">Estrés y ansiedad</option>
-        <option value="sueno">Problemas de sueño</option>
-        <option value="concentracion">Concentración y enfoque</option>
-    </select>
+    <div id="opciones-ejercicios" style="display: none;">
+        <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Sobre qué te gustarían los ejercicios?</p>
+        <select id="ejercicios-tema" class="input-field">
+            <option value="panico">Pánico escénico</option>
+            <option value="estres">Estrés y ansiedad</option>
+            <option value="sueno">Problemas de sueño</option>
+            <option value="concentracion">Concentración y enfoque</option>
+        </select>
 
-    <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Qué estilo de ejercicios te gustarían?</p>
-    <select id="ejercicios-estilo" class="input-field" style="margin-bottom: 4rem;">
-        <option value="visual">Visuales</option>
-        <option value="auditivo">Auditivos (sonidos/música)</option>
-        <option value="respiracion">Ejercicios de respiración</option>
-        <option value="meditacion">Meditación guiada</option>
-    </select>
+        <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Qué estilo de ejercicios te gustarían?</p>
+        <select id="ejercicios-estilo" class="input-field" style="margin-bottom: 4rem;">
+            <option value="visual">Visuales</option>
+            <option value="auditivo">Auditivos (sonidos/música)</option>
+            <option value="respiracion">Ejercicios de respiración</option>
+            <option value="meditacion">Meditación guiada</option>
+        </select>
+    </div>
 
     <button onclick="showScreen('foro')" class="btn-base btn-primary">
         Registrarse

@@ -84,3 +84,19 @@ window.onload = function() {
     // Mostrar la primera pantalla y controlar el menú
     showScreen(currentScreen);
 };
+
+// Mostramos las opciones de comboboxes
+function mostrarOpciones() {
+    const opcionesDiv = document.getElementById("opciones-ejercicios");
+
+    //mostramos el div
+    opcionesDiv.style.display = 'block';
+
+    //Deshabilitamos el boton de vamos
+    const vamosbtn = document.querySelector('.btn-primary[onclick="mostrarOpciones()"]');
+    if(vamosbtn){
+        vamosbtn.disabled =true;
+        vamosbtn.textContent='Opciones Agregadas';
+        b
+    }
+}
