@@ -1,0 +1,72 @@
+
+<div id="registro-paso1">
+    <div class="header-container">
+        <a href="#" onclick="showScreen('login')" class="back-link" style="position: relative; z-index: 10">
+            <i data-lucide="chevron-left" style="width: 1.40rem; height: 1.25rem; margin-right: 0.25rem;"></i>Atrás
+        </a>
+        <h1 class="screen-title header-title-centered">Registro de usuario</h1>
+    </div>
+
+    <div style="padding: 0 1rem;">
+        <label for="reg-nombre" class="text-label">Nombre de usuario</label>
+        <input type="text" id="reg-nombre" class="input-field">
+
+        <label for="reg-email" class="text-label">Nombre de usuario</label>
+        <input type="email" id="reg-email" class="input-field">
+
+        <label for="reg-password" class="text-label">Nombre de usuario</label>
+        <input type="password" id="reg-password" class="input-field">
+
+        <label for="reg-confirm-password" class="text-label">Nombre de usuario</label>
+        <input type="password" id="reg-confirm-password" class="input-field">
+
+        <button onclick="document.getElementById('registro-paso1').style.display='none';
+                         document.getElementById('registro-paso2').style.display='block';" class="btn-base btn-primary">
+                Siguiente
+        </button>               
+    </div>
+</div>
+
+<div id="registro-paso2" style="display: none;">
+    <div class=""header-container>
+        <a href="#" onclick="document.getElementById('registro-paso2').style.display='none';
+                             document.getElementById('registro-paso1').style.display='block';"
+                             class="back-link">
+            <i data-lucide="chevron-left" style="width: 1.25rem; height: 1.25rem; margin-right: 0.25rem">Atrás</i>
+        </a>
+        <h1 class="screen-title header-title-centered" >Personalización</h1>
+    </div>
+
+    <div class="reg-container">
+        <p style="font-size: 1.125rem; margin-bottom: 2rem; padding-top: 0.5rem;">¿Quieres añadir para algunos ejercicios de relajación?</p>
+
+        <button onclick="showScreen('foro')" class="btn-base btn-secondary">
+            Solo registrar
+        </button>
+        <button onclick="mostrarOpciones()" class="btn-base btn-primary" style="margin-bottom: 3rem;">
+            ¡Vamos!
+        </button>
+
+        <div id="opciones-ejercicios" style="display: none;">
+            <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Sobre qué te gustarían los ejercicios?</p>
+            <select id="ejercicios-tema" class="input-field">
+                <option value="panico">Pánico escénico</option>
+                <option value="estres">Estrés y ansiedad</option>
+                <option value="sueno">Problemas de sueño</option>
+                <option value="concentracion">Concentración y enfoque</option>
+            </select>
+
+            <p style="color: #d4d4d8; margin-bottom: 1rem;">¿Qué estilo de ejercicios te gustarían?</p>
+            <select id="ejercicios-estilo" class="input-field" style="margin-bottom: 4rem;">
+                <option value="visual">Visuales</option>
+                <option value="auditivo">Auditivos (sonidos/música)</option>
+                <option value="respiracion">Ejercicios de respiración</option>
+                <option value="meditacion">Meditación guiada</option>
+            </select>
+
+            <button id="btn-apply" onclick="showScreen('foro')" class="btn-base btn-primary">
+                Registrarse
+            </button>
+        </div>
+    </div>
+</div>

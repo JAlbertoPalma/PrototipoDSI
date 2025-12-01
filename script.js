@@ -1,5 +1,5 @@
 let currentScreen = 'login'; // Pantalla inicial
-const screens = ['login', 'registro1', 'registro2', 'foro', 'zona_tranquila', 'directorio'];
+const screens = ['login', 'registro', 'foro', 'zona_tranquila', 'directorio', 'perfil', 'perfil_psicologo'];
 
 // Función mejorada para cargar contenido de archivos HTML
 async function loadScreenContent(screenId) {
@@ -66,7 +66,7 @@ function updateNavMenu(screenId) {
 function toggleNavMenu() {
     const menu = document.getElementById('nav-menu');
     // Muestra el menú solo en las pantallas principales
-    if (['foro', 'zona_tranquila', 'directorio'].includes(currentScreen)) {
+    if (['foro', 'zona_tranquila', 'directorio', 'perfil'].includes(currentScreen)) {
         menu.style.display = 'flex';
     } else {
         menu.style.display = 'none';
@@ -88,15 +88,23 @@ window.onload = function() {
 // Mostramos las opciones de comboboxes
 function mostrarOpciones() {
     const opcionesDiv = document.getElementById("opciones-ejercicios");
+    const applyBtn = document.getElementById("btn-apply");
 
-    //mostramos el div
-    opcionesDiv.style.display = 'block';
+    // 1. Mostramos el div de opciones
+    if (opcionesDiv) {
+        opcionesDiv.style.display = 'block';
+    }
+
+    // 2. Mostramos el botón de Registrarse
+    if (applyBtn) {
+        applyBtn.style.display = 'block';
+    }
 
     //Deshabilitamos el boton de vamos
     const vamosbtn = document.querySelector('.btn-primary[onclick="mostrarOpciones()"]');
     if(vamosbtn){
         vamosbtn.disabled =true;
         vamosbtn.textContent='Opciones Agregadas';
-        b
+        vamosbtn.style.backgroundColor = '#52525b';
     }
 }

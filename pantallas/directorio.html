@@ -1,0 +1,134 @@
+<div class="header-container">
+    <a href="#" onclick="showScreen('foro')" class="back-link">
+        <i data-lucide="chevron-left" style="width: 1.25rem; height: 1.25rem; margin-right: 0.25rem;"></i>Atrás
+    </a>
+    <h1 class="screen-title header-title-centered">Directorio</h1>
+</div>
+
+<div style="padding: 0 0.5rem;">
+    <div style="display: flex; margin-bottom: 1rem;">
+        <button class="search-button">Buscar</button>
+        <input type="text" placeholder="Nombre..." class="search-input">
+    </div>
+
+    <div class="filters-container">
+        <select class="filter-select">
+            <option value="">Especialidad</option>
+            <option value="depresion">Depresión</option>
+            <option value="ansiedad">Ansiedad</option>
+            <option value="duelo">Duelo / Luto</option>
+        </select>
+        
+        <select class="filter-select">
+            <option value="">Precio</option>
+            <option value="low">menos de $500</option>
+            <option value="high">más de $500</option>
+        </select>
+
+        <select class="filter-select">
+            <option value="">Estrellas</option>
+            <option value="5">5 Estrellas</option>
+            <option value="4">4 Estrellas</option>
+            <option value="4">3 Estrellas</option>
+            <option value="4">2 Estrellas</option>
+            <option value="4">1 Estrellas</option>
+        </select>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        
+        <div class="card" onclick="showScreen('perfil_psicologo')" style="display: flex; align-items: flex-start; cursor: pointer; padding: 1rem;">
+            <div class="dir-avatar-container" style="margin-right: 1rem;">
+                <img src="https://cronicapuebla.com/wp-content/uploads/2024/11/06-marilyn-cote-ok.webp" 
+                     alt="Foto" style="width: 130%; height: 130%; object-fit: cover; border-radius: 50%;">
+            </div>
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <p style="font-size: 1.125rem; font-weight: 600; margin: 0;">Dra. Marilyn Cote</p>
+                    <span class="badge badge-star">
+                        <i data-lucide="star" style="width: 0.7rem; height: 0.7rem; margin-right: 2px; fill: currentColor;"></i> 4.9
+                    </span>
+                </div>
+
+                <p style="font-size: 0.8rem; color: #a1a1aa; margin: 0.25rem 0;">Neurociencias y Criminalística</p>
+                
+                <div class="card-badges">
+                    <span class="badge badge-price">$5200 / sesión</span>
+                    <span class="badge" style="background-color: #3f3f46; color: #d4d4d8;">Ansiedad</span>
+                    <span class="badge" style="background-color: #3f3f46; color: #d4d4d8;">Francés</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="showScreen('perfil_psicologo')" style="display: flex; align-items: flex-start; cursor: pointer; padding: 1rem;">
+            <div class="dir-avatar-container" style="margin-right: 1rem;">
+                <img src="https://www.famousbirthdays.com/faces/marcelo-adri--n-image.jpg"
+                     alt="Foto" style="width: 130%; height: 130%; object-fit: cover; border-radius: 50%;">
+            </div>
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <p style="font-size: 1.125rem; font-weight: 600; margin: 0;">Lic. Adrian Marcelo</p>
+                    <span class="badge badge-star">
+                        <i data-lucide="star" style="width: 0.7rem; height: 0.7rem; margin-right: 2px; fill: currentColor;"></i> 4.4
+                    </span>
+                </div>
+
+                <p style="font-size: 0.8rem; color: #a1a1aa; margin: 0.25rem 0;">Psicología Clínica</p>
+                
+                <div class="card-badges">
+                    <span class="badge badge-price">$600 / sesión</span>
+                    <span class="badge" style="background-color: #3f3f46; color: #d4d4d8;">Depresión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="showScreen('perfil_psicologo')" style="display: flex; align-items: flex-start; cursor: pointer; padding: 1rem;">
+            <div class="dir-avatar-container" style="margin-right: 1rem;">
+                <img src="https://www.infobae.com/resizer/v2/3FC4SKRH7BEDXC6U4UCGIU5JEI.jpg?auth=61be794b74673684bdedf9f558cba5c80a34f437bd4b45dc9ba0ea92de793e43&smart=true&width=1200&height=900&quality=85"
+                     alt="Foto" style="width: 130%; height: 130%; object-fit: cover; border-radius: 50%;">
+            </div>
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <p style="font-size: 1.125rem; font-weight: 600; margin: 0;">Lic. Marifer Centeno</p>
+                    <span class="badge badge-star">
+                        <i data-lucide="star" style="width: 0.7rem; height: 0.7rem; margin-right: 2px; fill: currentColor;"></i> 4.5
+                    </span>
+                </div>
+
+                <p style="font-size: 0.8rem; color: #a1a1aa; margin: 0.25rem 0;">Lectora de lenguaje corporal</p>
+                
+                <div class="card-badges">
+                    <span class="badge badge-price">$900 / sesión</span>
+                    <span class="badge" style="background-color: #3f3f46; color: #d4d4d8;">Ansiedad</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="showScreen('perfil_psicologo')" style="display: flex; align-items: flex-start; cursor: pointer; padding: 1rem;">
+            <div class="dir-avatar-container" style="margin-right: 1rem;">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1q4zrn.img?w=768&h=473&m=6&x=487&y=138&s=199&d=199"
+                     alt="Foto" style="width: 130%; height: 130%; object-fit: cover; border-radius: 50%;">
+            </div>
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <p style="font-size: 1.125rem; font-weight: 600; margin: 0;">Lic. Temach</p>
+                    <span class="badge badge-star">
+                        <i data-lucide="star" style="width: 0.7rem; height: 0.7rem; margin-right: 2px; fill: currentColor;"></i> 4.8
+                    </span>
+                </div>
+
+                <p style="font-size: 0.8rem; color: #a1a1aa; margin: 0.25rem 0;">Guru del modo guerra</p>
+                
+                <div class="card-badges">
+                    <span class="badge badge-price">$1500 / sesión</span>
+                    <span class="badge" style="background-color: #3f3f46; color: #d4d4d8;">Depresión</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
