@@ -66,7 +66,7 @@ function updateNavMenu(screenId) {
 function toggleNavMenu() {
     const menu = document.getElementById('nav-menu');
     // Muestra el menú solo en las pantallas principales
-    if (['foro', 'zona_tranquila', 'directorio', 'perfil'].includes(currentScreen)) {
+    if (['foro', 'zona_tranquila', 'directorio', 'perfil', 'perfil_psicologo'].includes(currentScreen)) {
         menu.style.display = 'flex';
     } else {
         menu.style.display = 'none';
