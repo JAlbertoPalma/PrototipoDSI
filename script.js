@@ -108,3 +108,40 @@ function mostrarOpciones() {
         vamosbtn.style.backgroundColor = '#52525b';
     }
 }
+
+// Mostrar u ocultar la caja de comentarios
+function toggleComments(elementId) {
+    const commentBox = document.getElementById(elementId);
+    if (commentBox) {
+        // Si está visible lo ocultamos, si no, lo mostramos
+        if (commentBox.style.display === 'none') {
+            commentBox.style.display = 'block';
+            // Animación simple de entrada
+            commentBox.style.opacity = '0';
+            setTimeout(() => commentBox.style.opacity = '1', 10);
+        } else {
+            commentBox.style.display = 'none';
+        }
+    }
+}
+
+// Dar Like (Cambia color y suma 1)
+function toggleLike(element) {
+    const icon = element.querySelector('svg') || element.querySelector('i'); // Busca el icono
+    const countSpan = element.querySelector('.like-count'); // Busca el número
+    
+    // Verificamos si ya tiene like (clase ficticia 'liked')
+    if (element.classList.contains('liked')) {
+        element.classList.remove('liked');
+        element.style.color = ''; // Vuelve al color original
+        countSpan.textContent = parseInt(countSpan.textContent) - 1; // Resta 1
+    } else {
+        element.classList.add('liked');
+        element.style.color = '#3b82f6';
+        countSpan.textContent = parseInt(countSpan.textContent) + 1; // Suma 1
+        
+        // Efecto visual pequeño
+        icon.style.transform = 'scale(1.2)';
+        setTimeout(() => icon.style.transform = 'scale(1)', 200);
+    }
+}
